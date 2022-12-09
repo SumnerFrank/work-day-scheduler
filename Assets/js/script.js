@@ -30,8 +30,5 @@ $(document).ready(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
-today.innerHTML = date;
+today.innerHTML = date.toDateString();
 
-const dayjs = require('dayjs')
-//import dayjs from 'dayjs' // ES 2015
-dayjs().format()

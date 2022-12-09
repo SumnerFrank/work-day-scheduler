@@ -4,6 +4,7 @@
 var saveButton = document.getElementById("saveBtn");
 var today = document.getElementById("currentDay");
 const date = new Date();
+today.innerHTML = date.toLocaleString();
 
 
 
@@ -30,5 +31,4 @@ $(document).ready(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
-today.innerHTML = date.toDateString();
 

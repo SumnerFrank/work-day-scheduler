@@ -1,15 +1,16 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
 var saveButton = document.getElementById("saveBtn");
 var today = document.getElementById("currentDay");
-const date = new Date();
-today.innerHTML = date.toLocaleString();
+const date = (new Date()).toDateString();
+const time = (new Date()).toLocaleTimeString();
+today.innerHTML = date + "  " + time
 
 
 
 $(document).ready(function () {
   saveButton.addEventListener("click");
+  // if (TIME > HOUR BLOCK) {
+    //change color to appropriate class (past, present, future)
+  // }
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in

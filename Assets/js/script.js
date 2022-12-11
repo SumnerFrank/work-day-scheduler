@@ -5,12 +5,19 @@ const date = (new Date()).toDateString();
 const time = (new Date()).toLocaleTimeString();
 const currentHour = (new Date()).getHours();
 today.innerHTML = date + "  " + time;
+var timeBlocks = document.getElementsByClassName("time-block")
+
 
 function changeColor() {
-  var hour = document.getElementById("hour"); 
-  if (currentHour > 8) {
-    hour.classList.add("present");
+  var hour = document.getElementById("hour-8"); 
+  for (let i = 0; i < timeBlocks.length; i++) {
+    if (currentHour < i) {
+      
+    }
+
   }
+
+
 }
 
 changeColor();

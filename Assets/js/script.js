@@ -3,15 +3,17 @@ var today = document.getElementById("currentDay");
 var taskInput = document.getElementById("description")
 const date = (new Date()).toDateString();
 const time = (new Date()).toLocaleTimeString();
-today.innerHTML = date + "  " + time
-
+const currentHour = (new Date()).getHours();
+today.innerHTML = date + "  " + time;
 
 function changeColor() {
   var hour = document.getElementById("hour"); 
-  if (time.getHours() = 8) {
+  if (currentHour > 8) {
     hour.classList.add("present");
   }
 }
+
+changeColor();
 
 
   // TODO: Add a listener for click events on the save button[]. This code should

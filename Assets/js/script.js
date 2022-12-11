@@ -11,8 +11,8 @@ var timeBlocks = document.getElementsByClassName("time-block")
 function changeColor() {
   var hour = document.getElementById("hour-8"); 
   for (let i = 0; i < timeBlocks.length; i++) {
-    if (currentHour < i) {
-      
+    if (currentHour < hour - "hour-") {
+      console.log("work?")
     }
 
   }

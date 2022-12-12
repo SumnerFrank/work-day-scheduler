@@ -4,39 +4,32 @@ const time = (new Date()).toLocaleTimeString();
 const currentHour = (new Date()).getHours();
 today.innerHTML = date + "  " + time;
 var timeBlocks = document.getElementsByClassName("time-block")
+var allRows = $(".description")
 
 function saveFieldJQuery () {
   console.log("function works?")
   var taskInput = $(this).siblings(".description").val();
-  console.log(taskInput);
+  var rowTime = $(this).parent().attr("id")
+  localStorage.setItem(rowTime, taskInput);
 }
+
 var saveBtnJQ = $(".saveBtn");
 saveBtnJQ.on("click", saveFieldJQuery);
 
-// function saveField() {
-//   var taskInput = document.getElementsByClassName("description");
-//   var saveBtn = document.getElementById("8amBtn");
-//   console.log("here is task input; ", taskInput);
-//   console.log(saveBtn);
-//   saveBtn.addEventListener("click", function(){
-//     localStorage.setItem("taskInput", taskInput);
-//   })
-// }
-// saveField(); 
-
-
-function changeColor() {
-  var hour = document.getElementById("hour-8"); 
-  for (let i = 0; i < timeBlocks.length; i++) {
-    if (currentHour < hour) {
-    }
-
+for(let i = 0; i < allRows.length; i++) {
+  var parentID = $(allRows[i]).parent().attr("id")
+  $(allRows[i]).val(localStorage.getItem(parentID))
+  if (currentHour > parentID) {
+    allRows[i].classList.add("past");
   }
-
-
+  if (currentHour == parentID) {
+    allRows[i].classList.add("present")
+  }
+  if (currentHour < parentID) {
+    allRows[i].classList.add("future")
+  }
 }
 
-changeColor();
 
 
   // TODO: Add a listener for click events on the save button[]. This code should

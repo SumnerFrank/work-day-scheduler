@@ -7,12 +7,16 @@ const currentHour = (new Date()).getHours();
 today.innerHTML = date + "  " + time;
 var timeBlocks = document.getElementsByClassName("time-block")
 
+function saveField() {
+  saveBtn.addEventListener("click")
+  taskInput.localStorage();
+}
+
 
 function changeColor() {
   var hour = document.getElementById("hour-8"); 
   for (let i = 0; i < timeBlocks.length; i++) {
-    if (currentHour < hour - "hour-") {
-      console.log("work?")
+    if (currentHour < hour) {
     }
 
   }

@@ -1,6 +1,4 @@
-var saveBtn = document.getElementById("saveBtn");
 var today = document.getElementById("currentDay");
-var taskInput = document.getElementById("description")
 const date = (new Date()).toDateString();
 const time = (new Date()).toLocaleTimeString();
 const currentHour = (new Date()).getHours();
@@ -8,9 +6,14 @@ today.innerHTML = date + "  " + time;
 var timeBlocks = document.getElementsByClassName("time-block")
 
 function saveField() {
-  saveBtn.addEventListener("click")
-  taskInput.localStorage();
+  var taskInput = document.getElementsByClassName("description")[0].value;
+  var saveBtn = document.getElementById("saveBtn");
+  saveBtn.addEventListener("click", function(){
+    localStorage.setItem("taskInput", taskInput);
+  })
+
 }
+saveField(); 
 
 
 function changeColor() {

@@ -5,15 +5,24 @@ const currentHour = (new Date()).getHours();
 today.innerHTML = date + "  " + time;
 var timeBlocks = document.getElementsByClassName("time-block")
 
-function saveField() {
-  var taskInput = document.getElementsByClassName("description")[0].value;
-  var saveBtn = document.getElementById("saveBtn");
-  saveBtn.addEventListener("click", function(){
-    localStorage.setItem("taskInput", taskInput);
-  })
-
+function saveFieldJQuery () {
+  console.log("function works?")
+  var taskInput = $(this).siblings(".description").val();
+  console.log(taskInput);
 }
-saveField(); 
+var saveBtnJQ = $(".saveBtn");
+saveBtnJQ.on("click", saveFieldJQuery);
+
+// function saveField() {
+//   var taskInput = document.getElementsByClassName("description");
+//   var saveBtn = document.getElementById("8amBtn");
+//   console.log("here is task input; ", taskInput);
+//   console.log(saveBtn);
+//   saveBtn.addEventListener("click", function(){
+//     localStorage.setItem("taskInput", taskInput);
+//   })
+// }
+// saveField(); 
 
 
 function changeColor() {

@@ -33,4 +33,4 @@ THEN the saved events persist
 ```
 
 The following animation demonstrates the application functionality:
-<img src=./Assets/images/Screenshot 2022-12-12 at 9.09.34 PM.png>
+<img src="./Assets/images/Screenshot 2022-12-12 at 9.09.34 PM.png">

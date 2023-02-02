@@ -32,5 +32,8 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+<a href='https://sumnerfrank.github.io/work-day-scheduler/'>Click Here To View Deployment!</a>
+
+
 The following animation demonstrates the application functionality:
 <img src="./Assets/images/Screenshot 2022-12-12 at 9.09.34 PM.png">
